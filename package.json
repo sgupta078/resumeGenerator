@@ -1,0 +1,14 @@
+{
+  "name": "buildresume",
+  "version": "1.0.0",
+  "description": "Resume Builder by Shubham Gupta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
