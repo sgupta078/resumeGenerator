@@ -14,12 +14,14 @@
     <title>Resume Builder</title>
   </head>
   <body>
-    <div class="container">
+
+
+    <!--CV Form-->
+
+    <div class="container" id="cv-form">
       <h1 class="text-center">Resume Generator</h1>
 
       <div class="row mt-5">
-
-
         <div class="col-md-6">
           <h3 class="text-center">Personal Information</h3>
           <div class="form-group mt-2">
@@ -36,6 +38,15 @@
             <input
               type="tel"
               id="contactField"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="emailField">Your Email-ID</label>
+            <input
+              type="email"
+              id="emailField"
               placeholder="Enter here"
               class="form-control"
             />
@@ -70,54 +81,143 @@
           </div>
         </div>
 
-
         <div class="col-md-6">
           <h3 class="text-center">Professional Information</h3>
           <div class="form-group mt-2">
-            <label for="objectiveField">Your Objective</label>
+            <label for="">Your Objective</label>
             <textarea
+              id="objectiveFeild"
               placeholder="Enter here"
               class="form-control"
               rows="3"
             ></textarea>
           </div>
           <div class="form-group mt-2" id="we">
-            <label for="workField">Your Work Experience</label>
+            <label for="">Your Work Experience</label>
             <textarea
               placeholder="Enter here"
               class="form-control weField"
             ></textarea>
             <div class="container text-center mt-2" id="weAddbtn">
-              <button class="btn btn-primary btn-sm" onclick="addWE()">Add</button>
+              <button class="btn btn-primary btn-sm" onclick="addWE()">
+                Add
+              </button>
             </div>
           </div>
           <div class="form-group mt-2" id="aq">
-            <label for="academicQualificationField">Your Academic Qualification</label>
+            <label for="">
+              Your Academic Qualification
+            </label>
             <textarea
               placeholder="Enter here"
               class="form-control aqField"
             ></textarea>
             <div class="container text-center mt-2" id="aqAddbtn">
-              <button class="btn btn-primary btn-sm" onclick="addAQ()">Add</button>
+              <button class="btn btn-primary btn-sm" onclick="addAQ()">
+                Add
+              </button>
             </div>
           </div>
           <div class="form-group mt-2" id="sk">
-            <label for="skillsField">Your Skills</label>
+            <label for="">Your Skills</label>
             <textarea
               placeholder="Enter here"
               class="form-control skillsField"
               rows="1"
             ></textarea>
             <div class="container text-center mt-2" id="skillAddbtn">
-              <button class="btn btn-primary btn-sm" onclick="addSK()">Add</button>
+              <button class="btn btn-primary btn-sm" onclick="addSK()">
+                Add
+              </button>
             </div>
           </div>
         </div>
-
-
       </div>
       <div class="container text-center mt-4">
-        <button class="btn btn-primary btn-lg">Generate Resume</button>
+        <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+      </div>
+    </div>
+
+    <!--CV template-->
+
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+          <img
+            src="https://cdn3.vectorstock.com/i/thumb-large/13/17/male-avatar-profile-picture-gold-member-silhouette-vector-5351317.jpg"
+            class="img-fluid myImg"
+            alt=""
+          />
+          <div class="container">
+            <p id="nameT">Shubham Gupta</p>
+            <p id="contactT">+918709207030</p>
+            <p><a href="mailto:sg07818@gmail.com" id="emailT">sg07818@gmail.com</a></p>
+            <p id="addressT">Agarwal sweets Building, Khandak Par, BiharSharif, 803101</p>
+
+            <hr></hr>
+            <p>
+              <a href="#1" id="linkedinT">Linkedin</a>
+            </p>
+            <p>
+              <a href="#2" id="githubT">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 py-5">
+
+          <div class="card">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">A technology and software enthusiast , always ready to enhance my skills and work with atmost dedication.</p>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header background">
+              <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>The sparks foundation</li>
+                <li>Two technology pvt ltd.</li>
+                <li>Chegg India</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-header background">
+              <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>10th class with 10 CGPA</li>
+                <li>12th class</li>
+                <li>B.tech CSIT</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="card mt-5">
+            <div class="card-header background">
+              <h3>Skills</h3>
+            </div>
+            <div class="card-body">
+              <ul id="skillT">
+                <li>C++/ Java Programming</li>
+                <li>SQL</li>
+                <li>Data Structure and ALgorithms</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container text-center mt-3">
+            <button class="btn btn-lg background" onclick="printResume()">Print Resume</button>
+          </div>
+        </div>
       </div>
     </div>
 
