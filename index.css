@@ -2,6 +2,10 @@
     /* display: none; */
 }
 
+#cv-template{
+    display: none;
+}
+
 .myImg{
     border-radius: 50%;
     width: 200px;
